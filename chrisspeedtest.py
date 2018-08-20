@@ -3,7 +3,7 @@ import re
 import subprocess
 import time
 
-response = subprocess.Popen('speedtest-cli --simple -- server 8066', shell=True, stdout=subprocess.PIPE).stdout.read() 
+response = subprocess.Popen('speedtest-cli --simple --server 8066', shell=True, stdout=subprocess.PIPE).stdout.read() 
 #Excell Server used above
 
 ping = re.findall('Ping:\s(.*?)\s', response, re.MULTILINE)
